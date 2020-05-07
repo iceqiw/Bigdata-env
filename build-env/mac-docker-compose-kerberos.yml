@@ -9,4 +9,4 @@ services:
       - 749:749
       - 750:750
     volumes:
-      - ./app:/opt/app
+      - ./apps:/opt/apps
