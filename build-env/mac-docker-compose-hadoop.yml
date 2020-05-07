@@ -10,7 +10,7 @@ services:
     volumes:
       - ~/bigdata/hadoop:/opt/bigdata/hadoop
       - ./etc/hadoop:/opt/bigdata/etc/hadoop
-      - ./env/bigdata_env.sh:/etc/profile.d/bigdata_env.sh
+      - ./env/bigdata_env:/etc/profile.d/bigdata_env
   hadoop-slave1:
     image: hd-container:1.0
     hostname: hadoop-slave1
@@ -19,7 +19,7 @@ services:
     volumes:
       - ~/bigdata/hadoop:/opt/bigdata/hadoop
       - ./etc/hadoop:/opt/bigdata/etc/hadoop
-      - ./env/bigdata_env.sh:/etc/profile.d/bigdata_env.sh
+      - ./env/bigdata_env:/etc/profile.d/bigdata_env
   hadoop-slave2:
     image: hd-container:1.0
     hostname: hadoop-slave2
@@ -28,4 +28,4 @@ services:
     volumes:
       - ~/bigdata/hadoop:/opt/bigdata/hadoop
       - ./etc/hadoop:/opt/bigdata/etc/hadoop
-      - ./env/bigdata_env.sh:/etc/profile.d/bigdata_env.sh
+      - ./env/bigdata_env:/etc/profile.d/bigdata_env

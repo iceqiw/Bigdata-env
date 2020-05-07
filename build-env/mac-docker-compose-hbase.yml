@@ -16,7 +16,7 @@ services:
       - ./etc/hbase:/opt/bigdata/etc/hbase
       - ~/bigdata/zookeeper:/opt/bigdata/zookeeper
       - ./etc/zookeeper:/opt/bigdata/etc/zookeeper
-      - ./env/bigdata_env.sh:/etc/profile.d/bigdata_env.sh
+      - ./env/bigdata_env.:/etc/profile.d/bigdata_env.
   hadoop-slave1:
     image: hd-container:1.0
     hostname: hadoop-slave1
@@ -30,7 +30,7 @@ services:
       - ./etc/hbase:/opt/bigdata/etc/hbase
       - ~/bigdata/zookeeper:/opt/bigdata/zookeeper
       - ./etc/zookeeper:/opt/bigdata/etc/zookeeper
-      - ./env/bigdata_env.sh:/etc/profile.d/bigdata_env.sh
+      - ./env/bigdata_env.:/etc/profile.d/bigdata_env.
   hadoop-slave2:
     image: hd-container:1.0
     hostname: hadoop-slave2
@@ -44,4 +44,4 @@ services:
       - ./etc/hbase:/opt/bigdata/etc/hbase
       - ~/bigdata/zookeeper:/opt/bigdata/zookeeper
       - ./etc/zookeeper:/opt/bigdata/etc/zookeeper
-      - ./env/bigdata_env.sh:/etc/profile.d/bigdata_env.sh
+      - ./env/bigdata_env.:/etc/profile.d/bigdata_env.

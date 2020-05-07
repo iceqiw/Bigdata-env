@@ -16,4 +16,4 @@ services:
       - ./etc-debug/hbase:/opt/bigdata/etc/hbase
       - ~/bigdata/zookeeper:/opt/bigdata/zookeeper
       - ./etc-debug/zookeeper:/opt/bigdata/etc/zookeeper
-      - ./env/bigdata_env.sh:/etc/profile.d/bigdata_env.sh
+      - ./env/bigdata_env:/etc/profile.d/bigdata_env
