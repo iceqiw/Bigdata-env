@@ -5,7 +5,7 @@
 # docker 镜像构建命令e.g
 
 ```
-docker build -t hd-container:1.0 .
+docker build -t bigdata:1.0 .
 ```
 
 ## 修改yml文件中的挂载目录e.g
