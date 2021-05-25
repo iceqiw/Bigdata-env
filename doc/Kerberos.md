@@ -1,6 +1,6 @@
 # kerberos 安装
 
-## 构建docker 镜像
+## 构建 docker 镜像
 
 ```
 docker build -t kdc:1.0 .
@@ -66,8 +66,6 @@ includedir /etc/krb5.conf.d/
  hadoop.com = HADOOP.COM
 ```
 
-
-
 ## kadmin 修改
 
 ```shell
@@ -90,7 +88,7 @@ systemctl start kadmin krb5kdc
 
 ## 遇到问题
 
-客户端配置需要指定tcp协议
+客户端配置需要指定 tcp 协议
 
 ```
 kdc = tcp/realm.example.com:88
@@ -111,25 +109,21 @@ kinit qiwei/admin
 
 addprinc qiwei/admin
 
-addprinc -randkey hdfs/hadoop-master1@HADOOP.COM
-addprinc -randkey HTTP/hadoop-master1@HADOOP.COM
-xst -k hdfs.keytab hdfs/hadoop-master1@HADOOP.COM
-xst -k HTTP.keytab HTTP/hadoop-master1@HADOOP.COM
+addprinc -randkey hdfs/bd-master-1@HADOOP.COM
+addprinc -randkey HTTP/bd-master-1@HADOOP.COM
+xst -k hdfs.keytab hdfs/bd-master-1@HADOOP.COM
+xst -k HTTP.keytab HTTP/bd-master-1@HADOOP.COM
 
 
-addprinc -randkey test/hadoop-master1@HADOOP.COM
-xst -k test.keytab test/hadoop-master1@HADOOP.COM
+addprinc -randkey test/bd-master-1@HADOOP.COM
+xst -k test.keytab test/bd-master-1@HADOOP.COM
 
 ktutil
-rkt hdfs.keytab    
+rkt hdfs.keytab
 rkt HTTP.keytab
-wkt hdfs.keytab  
+wkt hdfs.keytab
 exit
 ```
-
-
-
-
 
 ## 参考
 
